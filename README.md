@@ -1,7 +1,25 @@
-# koa2-demo
+# nodeTaste
 
-[![npm version](https://badge.fury.io/js/koa2-demo.svg)](http://badge.fury.io/js/runkoa)
-[![Build](https://travis-ci.org/17koa/koa2-demo.svg?branch=master)](https://travis-ci.org/17koa/koa2-demo)
+
+权限检查、node调用dubbo服务
+
+
+
+基于[koa2-demo](https://github.com/17koa/koa2-demo)搭建
+
+并在此基础上扩展了：
+1、请求url的权限检查（类似h5服务中的AuthorizeConfig注解）
+2、node调用dubbo接口。
+
+
+开发过程中，参考了：
+https://github.com/17koa/koa2-demo
+https://github.com/Smallpath/Blog
+https://github.com/Corey600/zoodubbo
+
+
+
+===
 
 
 
@@ -21,9 +39,10 @@
 ## Getting Start
 
 ```
-git clone https://github.com/17koa/koa2-demo.git
-cd koa2-demo
+git clone https://github.com/liqian008/nodeTaste.git
+cd nodeTaste
 npm install
+npm install zoodubbo
 npm start
 ```
 
@@ -108,6 +127,13 @@ app.use(views(__dirname + '/views-ejs', {
 ├── LICENSE
 ├── README.md
 ├── app.js
+├── authorize
+│   ├── authorizeConfig.js
+├── conf
+│   ├── config.js
+├── lib
+│   ├── dubboUserPostInfoClient.js
+│   ├── dubboUserPointClient.js
 ├── bin
 │   ├── run
 │   └── www
@@ -150,8 +176,8 @@ app.use(views(__dirname + '/views-ejs', {
 
 - bin/run(runkoa执行bin/www)
 - bin/www是常规koa启动文件，和express的一样
-- views是放默认的jade文件
 - views-ejs是放ejs文件
+- views是放默认的jade文件
 
 
 ## 推荐
