@@ -11,7 +11,8 @@ router.get('/', authorizeConfig.force, async function (ctx, next) {
 	var userPoints = await dubboUserPointClient.queryUserPoints(383188);
 
 	//取邮寄地址
-	var userPostInfo = ctx.userPostInfo;// await dubboUserPostInfoClient.loadPostInfoByUserId(383188);
+	var userPostInfo = await dubboUserPostInfoClient.loadPostInfoByUserId(383188);
+	//var userPostInfo = ctx.userPostInfo;// await dubboUserPostInfoClient.loadPostInfoByUserId(383188);
 
 	// ctx.body = { foo: 'bar' };//'this a users response!';
 	console.log("aaaaaa", userPoints);
