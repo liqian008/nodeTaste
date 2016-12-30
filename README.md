@@ -15,9 +15,9 @@
 
 开发过程中，参考了：
 
--https://github.com/17koa/koa2-demo
--https://github.com/Smallpath/Blog
--https://github.com/Corey600/zoodubbo
+- https://github.com/17koa/koa2-demo
+- https://github.com/Smallpath/Blog
+- https://github.com/Corey600/zoodubbo
 
 
 
